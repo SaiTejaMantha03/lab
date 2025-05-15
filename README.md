@@ -1,2 +1,2 @@
 # Labratory Website
-### This is a website for medical labratory.
+### This is a website for medical diagonstics centre.
