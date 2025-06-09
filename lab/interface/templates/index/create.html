@@ -1,8 +1,11 @@
 {% extends "index/index.html" %}
 
-{% block "body" %}
+{% block body %}
 <div class="container mt-4">
-    <form class="row g-3" method="POST" action="">
+    <h3>Book your test now and grab exciting offers available.For further details regarding package <a href="{%url 'contact'%}"> contact </a> </a></h3>
+    <br>
+
+    <form action="https://send.pageclip.co/oWpJXwwiSdDlOBM8Wasjr82sY9DAHzBM" class="pageclip-form" method="post">
         {% csrf_token %}
 
         <div class="col-md-6">
@@ -14,7 +17,7 @@
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" required>
         </div>
-
+        
         <div class="col-md-6">
             <label for="phonenumber" class="form-label">Phone Number</label>
             <input type="tel" class="form-control" id="phonenumber" name="phonenumber"
@@ -26,30 +29,25 @@
             <input type="text" class="form-control" id="inputAddress" name="address"
                    placeholder="1234 Main St">
         </div>
-
-        <div class="col-md-6">
-            <label for="test" class="form-label">Test</label>
-            <input type="text" class="form-control" id="test" name="test">
-        </div>
-
-        <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity" name="city">
-        </div>
-
+        
         <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select" name="state">
+            <label for="test" class="form-label">Test</label>
+            <select id="test" class="form-select" name="test">
                 <option selected disabled value="">Choose...</option>
-                {% for name in names %}
-            <option value="{{ name }}">{{ name }}</option>
+                {% for test in tests %}
+            <option value="{{ test }}">{{ test }}</option>
                 {% endfor %}
             </select>
         </div>
 
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+
+       
+
+
+
+        <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
     </form>
 </div>
 {% endblock %}

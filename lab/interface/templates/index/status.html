@@ -1,16 +1,39 @@
 {% extends "index/index.html" %}
+{% load static %}
 
-{% block "body"%}
-<h2> This page is under work.</h2>
-<div class="form-floating mb-3">
-  <input type="email" class="form-control" id="email" placeholder="name@example.com">
-  <label for="email">Email address</label>
-</div>
-<div class="form-floating">
-  <input type="password" class="form-control" id="contact" placeholder="Contact">
-  <label for="email">Contact Number</label>
-    <br>
-    <br>
-    <button type="button" class="btn btn-outline-success">Submit</button>
-</div>
-{% endblock%}
+{% block body %}
+  {% if error %}
+    <p>{{ error }}</p>
+  {% endif %}
+
+  {% if test %}
+    <h2>Thank You for visiting Sri Sai Medical Centre</h2>
+    <h4>Your Booking Details</h4>
+    <ul>
+      {% for t in test %}
+        <li>Test id : {{ t.id }}</li>
+        <li>Test name : {{ t.name }}</li>
+        <li>Email : {{ t.email }}</li>
+        <hr>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if not test and not error %}
+    <h2>You can draw information about tests..</h2>
+    <form action="https://send.pageclip.co/oWpJXwwiSdDlOBM8Wasjr82sY9DAHzBM" class="pageclip-form" method="post">
+      {% csrf_token %}
+      <div>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+      </div>
+      <div>
+        <input type="number" class="form-control" name="contact" id="contact" maxlength="10" size="10" placeholder="Contact">
+      </div>
+      <br>
+      <br>
+      <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+    </form>
+  {% endif %}
+{% endblock %}
