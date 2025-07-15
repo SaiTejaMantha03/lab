@@ -1,0 +1,10 @@
+Django>=4.2,<5.0
+mysqlclient>=2.2.0         # MySQL driver for Django (recommended)
+djangorestframework>=3.14  # For REST APIs
+python-decouple>=3.8       # Environment variable management
+gunicorn>=21.2.0           # WSGI HTTP server (used in production)
+whitenoise>=6.6.0          # Static files serving (for production)
+
+# Optional but common
+django-cors-headers>=4.3.1 # CORS headers for API
+Pillow>=10.0.0             # Image processing
