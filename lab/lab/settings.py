@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u7w)_b*6u$=)a*-wqc!mk3c1km@u&uei968o4=nb6ssg!fzxd-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # For deployment - in production, specify exact domains
 
 
 # Application definition
@@ -42,13 +42,8 @@ INSTALLED_APPS = [
 ]
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sys',
-        'USER': 'sai',
-        'PASSWORD': '12345',
-        'HOST': '127.0.0.1',  # Use Public IP or '127.0.0.1' if using Cloud Proxy
-        'PORT': '3306',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -57,6 +52,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For deployment
 
 
 MIDDLEWARE = [
