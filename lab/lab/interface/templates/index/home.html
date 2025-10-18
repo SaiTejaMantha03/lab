@@ -1,0 +1,87 @@
+{% extends "index/index.html" %}
+{% load static %}
+{% block body %}
+
+<!-- Hero Section -->
+<div class="hero-section text-center py-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <h1 class="display-4 fw-bold text-primary mb-4">Sri Sai Medical Center</h1>
+            <p class="lead text-muted mb-4">Your trusted healthcare partner for comprehensive medical testing and diagnostics</p>
+            <a href="{% url 'create' %}" class="btn btn-primary btn-lg me-3">
+                <span class="icon">📅</span> Book a Test
+            </a>
+            <a href="{% url 'status' %}" class="btn btn-outline-primary btn-lg">
+                <span class="icon">🔍</span> Check Status
+            </a>
+        </div>
+        <div class="col-lg-6">
+            <div class="medical-icon-container">
+                <span class="medical-hero-icon">👨‍⚕️</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="row g-4 mb-5">
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-card h-100 text-center p-4">
+            <div class="feature-icon mb-3">
+                <span class="icon-large">🏠</span>
+            </div>
+            <h5 class="fw-bold">Door Sample Collection</h5>
+            <p class="text-muted">Convenient sample collection from the comfort of your home</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-card h-100 text-center p-4">
+            <div class="feature-icon mb-3">
+                <span class="icon-large">💰</span>
+            </div>
+            <h5 class="fw-bold">Budget Friendly</h5>
+            <p class="text-muted">Genuine and affordable healthcare services for everyone</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-card h-100 text-center p-4">
+            <div class="feature-icon mb-3">
+                <span class="icon-large">🏆</span>
+            </div>
+            <h5 class="fw-bold">Authorized & Reliable</h5>
+            <p class="text-muted">Certified medical facility with trusted healthcare professionals</p>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-card h-100 text-center p-4">
+            <div class="feature-icon mb-3">
+                <span class="icon-large">⏰</span>
+            </div>
+            <h5 class="fw-bold">Since 2003</h5>
+            <p class="text-muted">Over 20 years of experience in healthcare services</p>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="cta-section text-center py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h2 class="fw-bold mb-3">Ready to Get Started?</h2>
+            <p class="lead text-muted mb-4">Experience hassle-free medical testing with our professional services</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="{% url 'create' %}" class="btn btn-success btn-lg">
+                    <span class="icon">📅</span> Book Now
+                </a>
+                <a href="{% url 'lists' %}" class="btn btn-info btn-lg">
+                    <span class="icon">📋</span> View Tests
+                </a>
+                <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
+                    <span class="icon">📞</span> Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

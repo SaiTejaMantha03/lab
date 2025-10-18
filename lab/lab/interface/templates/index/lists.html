@@ -1,0 +1,12 @@
+{%extends "index/index.html" %}
+
+
+{% block body %}
+<h3>All Tests Available are represented below...</h3>
+<ul id="test_lists_ul">
+  {% for test in tests %}
+  <li id="test_lists"><a href="{% url 'create' %}">{{test}}</a></li>
+  {%endfor %}
+</ul>
+
+{% endblock%}
