@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: lab-medical-center
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "cd lab && gunicorn lab.wsgi:application"
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DEBUG
+        value: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "*"
