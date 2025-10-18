@@ -3,7 +3,7 @@ services:
     name: lab-medical-center
     env: python
     buildCommand: "./build.sh"
-    startCommand: "cd lab/lab && gunicorn lab.wsgi:application"
+    startCommand: "cd lab/lab/lab && gunicorn lab.wsgi:application"
     plan: free
     envVars:
       - key: PYTHON_VERSION
