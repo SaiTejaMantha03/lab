@@ -2,86 +2,120 @@
 {% load static %}
 {% block body %}
 
-<!-- Hero Section -->
-<div class="hero-section text-center py-5 mb-5">
-    <div class="row align-items-center">
-        <div class="col-lg-6">
-            <h1 class="display-4 fw-bold text-primary mb-4">Sri Sai Medical Center</h1>
-            <p class="lead text-muted mb-4">Your trusted healthcare partner for comprehensive medical testing and diagnostics</p>
-            <a href="{% url 'create' %}" class="btn btn-primary btn-lg me-3">
-                <span class="icon">📅</span> Book a Test
-            </a>
-            <a href="{% url 'status' %}" class="btn btn-outline-primary btn-lg">
-                <span class="icon">🔍</span> Check Status
-            </a>
-        </div>
-        <div class="col-lg-6">
-            <div class="medical-icon-container">
-                <span class="medical-hero-icon">👨‍⚕️</span>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- ── Hero ── -->
+<section class="hero-section">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
 
-<!-- Features Section -->
-<div class="row g-4 mb-5">
-    <div class="col-md-6 col-lg-3">
-        <div class="feature-card h-100 text-center p-4">
-            <div class="feature-icon mb-3">
-                <span class="icon-large">🏠</span>
-            </div>
-            <h5 class="fw-bold">Door Sample Collection</h5>
-            <p class="text-muted">Convenient sample collection from the comfort of your home</p>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-        <div class="feature-card h-100 text-center p-4">
-            <div class="feature-icon mb-3">
-                <span class="icon-large">💰</span>
-            </div>
-            <h5 class="fw-bold">Budget Friendly</h5>
-            <p class="text-muted">Genuine and affordable healthcare services for everyone</p>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-        <div class="feature-card h-100 text-center p-4">
-            <div class="feature-icon mb-3">
-                <span class="icon-large">🏆</span>
-            </div>
-            <h5 class="fw-bold">Authorized & Reliable</h5>
-            <p class="text-muted">Certified medical facility with trusted healthcare professionals</p>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-        <div class="feature-card h-100 text-center p-4">
-            <div class="feature-icon mb-3">
-                <span class="icon-large">⏰</span>
-            </div>
-            <h5 class="fw-bold">Since 2003</h5>
-            <p class="text-muted">Over 20 years of experience in healthcare services</p>
-        </div>
-    </div>
-</div>
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Trusted Diagnostics Since&nbsp;2003
+      </div>
 
-<!-- Call to Action -->
-<div class="cta-section text-center py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <h2 class="fw-bold mb-3">Ready to Get Started?</h2>
-            <p class="lead text-muted mb-4">Experience hassle-free medical testing with our professional services</p>
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-                <a href="{% url 'create' %}" class="btn btn-success btn-lg">
-                    <span class="icon">📅</span> Book Now
-                </a>
-                <a href="{% url 'lists' %}" class="btn btn-info btn-lg">
-                    <span class="icon">📋</span> View Tests
-                </a>
-                <a href="{% url 'contact' %}" class="btn btn-warning btn-lg">
-                    <span class="icon">📞</span> Contact Us
-                </a>
-            </div>
+      <h1 class="hero-title">
+        Advanced Healthcare<br>
+        <span class="gradient-text">Diagnostics & Testing</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Comprehensive medical testing with home sample collection, certified professionals, and results delivered within 24–48 hours.
+      </p>
+
+      <div class="hero-actions">
+        <a href="{% url 'create' %}" class="btn btn-primary btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a Test
+        </a>
+        <a href="{% url 'status' %}" class="btn btn-outline btn-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Check Status
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-value" data-target="20" data-suffix="+">0+</div>
+          <div class="stat-label">Years Experience</div>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value" data-target="26" data-suffix="">0</div>
+          <div class="stat-label">Tests Available</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value" data-target="5000" data-suffix="+">0+</div>
+          <div class="stat-label">Patients Served</div>
+        </div>
+      </div>
     </div>
-</div>
+
+    <!-- Visual -->
+    <div class="hero-visual">
+      <div class="hero-orb">
+        <span class="hero-icon-center">🏥</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Features ── -->
+<section style="margin-bottom:3.5rem;">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <p class="section-label">Why Choose Us</p>
+    <h2 class="section-title">Everything You Need</h2>
+    <p class="section-subtitle">Professional healthcare services designed for your comfort and convenience</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;">
+
+    <div class="feature-card">
+      <div class="feature-icon-wrap">🏠</div>
+      <h5>Home Collection</h5>
+      <p>Sample collection from the comfort of your home at your preferred time.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon-wrap">💰</div>
+      <h5>Budget Friendly</h5>
+      <p>Genuine and affordable healthcare services accessible to everyone.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon-wrap">🏆</div>
+      <h5>Certified & Reliable</h5>
+      <p>Authorized facility with certified medical professionals you can trust.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon-wrap">⚡</div>
+      <h5>Fast Reports</h5>
+      <p>Digital reports delivered to you within 24–48 hours via email.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" style="margin-bottom:2rem;">
+  <h2>Ready to Book Your Test?</h2>
+  <p>Experience hassle-free, professional medical testing. Our team is ready to assist you.</p>
+  <div class="cta-actions">
+    <a href="{% url 'create' %}" class="btn btn-primary btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Now
+    </a>
+    <a href="{% url 'lists' %}" class="btn btn-outline btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      View All Tests
+    </a>
+    <a href="{% url 'contact' %}" class="btn btn-outline btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.61-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.92z"/></svg>
+      Contact Us
+    </a>
+  </div>
+</section>
 
 {% endblock %}

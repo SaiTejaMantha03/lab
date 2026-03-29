@@ -1,9 +1,80 @@
 {% extends "index/index.html" %}
+{% block body %}
 
-{% block body%}
-    <h1>Contact Details</h1>
-    <h2 name="email">Email Address: SriSaiDiagnostics@gmail.com</h2>
-    <h2>Contact Details : 99999999999 </h2>
-    <h3>Alternative Number: 6309308843</h3>
-    <h3>Just Dial: <a href="https://www.justdial.com/Visakhapatnam/Sri-Sai-Medical-Center-Gajuwaka/0891PX891-X891-210715152621-S6X2_BZDET"> try me</a></h3>
+<div class="contact-container">
+
+  <div style="margin-bottom:2rem;">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">We're here to help. Reach out to us through any of the channels below.</p>
+  </div>
+
+  <div class="contact-card">
+
+    <div class="contact-info-row">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Email Address</div>
+        <div class="contact-value">
+          <a href="mailto:SriSaiDiagnostics@gmail.com">SriSaiDiagnostics@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.61-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.92z"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Primary Contact</div>
+        <div class="contact-value">
+          <a href="tel:+916309308843">+91 63093 08843</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Location (Vizag)</div>
+        <div class="contact-value">
+          Dr No :M1, Beside Best Western Rama Chandra Hotel, Opposite Sri Krishna Temple, Gajuwaka, Visakhapatnam - 530026
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Just Dial</div>
+        <div class="contact-value">
+          <a href="https://www.justdial.com/Visakhapatnam/Sri-Sai-Medical-Center-Gajuwaka/0891PX891-X891-210715152621-S6X2_BZDET" target="_blank" rel="noopener">
+            View on JustDial →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="margin-top:2rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+    <a href="{% url 'create' %}" class="btn btn-primary btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book a Test
+    </a>
+    <a href="{% url 'index' %}" class="btn btn-outline btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Home
+    </a>
+  </div>
+
+</div>
+
 {% endblock %}
